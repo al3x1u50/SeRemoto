@@ -1,0 +1,24 @@
+{
+  "name": "agent-remote-relay",
+  "version": "1.0.0",
+  "description": "Servidor Relay WebSocket para retransmisión de mensajes cifrados E2E entre IDE y app móvil",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:render": "node index.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/conexion.test.js"
+  },
+  "keywords": [
+    "relay",
+    "websocket",
+    "e2e",
+    "encryption",
+    "agent"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0",
+    "uuid": "^10.0.0"
+  }
+}
