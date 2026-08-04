@@ -14,7 +14,7 @@ const { TIPOS_MENSAJE, CODIGOS_ERROR, validarMensaje, construirError, construirN
 const { SalaManager } = require('./sala-manager');
 
 // ─── Configuración ──────────────────────────────────────────
-const PUERTO = parseInt(process.env.PORT, 10) || 3900;
+const PUERTO = parseInt(process.env.PORT, 10) || 10000;
 const HOST = process.env.HOST || '0.0.0.0';
 
 // ─── Instancias ─────────────────────────────────────────────
