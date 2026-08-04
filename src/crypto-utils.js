@@ -32,8 +32,8 @@ function esBase64Valido(valor) {
  * Valida la estructura de un payload cifrado.
  * Verifica que contenga los campos necesarios en formato Base64:
  * - encryptedData: Los datos cifrados
- * - iv: Vector de inicialización (debe ser 12 bytes para AES-GCM → 16 chars en base64)
- * - tag (opcional): Tag de autenticación de AES-GCM
+ * - iv: Vector de inicialización (16 bytes para AES-CBC → 24 chars en base64)
+ * - tag (opcional): No usado en CBC, reservado para futura migración a GCM
  *
  * @param {object} payload - El objeto payload a validar.
  * @returns {{ valido: boolean, error?: string }}
@@ -59,7 +59,7 @@ function validarPayloadCifrado(payload) {
     };
   }
 
-  // Validar tag si está presente (opcional pero recomendado para AES-GCM)
+  // Validar tag si está presente (opcional; reservado para futura migración a GCM)
   if (payload.tag !== undefined) {
     if (!esBase64Valido(payload.tag)) {
       return {
