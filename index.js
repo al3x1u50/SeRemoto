@@ -10,4 +10,5 @@
 'use strict';
 
 // Redirigir al servidor principal
-require('./src/server.js');
+const { iniciar } = require('./src/server.js');
+iniciar();
