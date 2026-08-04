@@ -180,11 +180,7 @@ wss.on('close', () => {
 // ─── Iniciar servidor ───────────────────────────────────────
 function iniciar() {
   httpServer.listen(PUERTO, HOST, () => {
-    console.log('═══════════════════════════════════════════════');
-    console.log('  🔌 Agent Remote Relay — Servidor iniciado');
-    console.log(`  📡 WebSocket:  ws://${HOST}:${PUERTO}`);
-    console.log(`  🏥 Health:     http://${HOST}:${PUERTO}/health`);
-    console.log('═══════════════════════════════════════════════');
+    console.log(`Servidor escuchando en el puerto ${PUERTO}`);
   });
 }
 
